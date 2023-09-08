@@ -9,8 +9,8 @@
  * Return: returns 0 if succeeded
  */
 
-int main()
+int main(void)
 {
-    puts("\"Programming is like building a multilingual puzzle");
+    puts("\"Programming is like building a multilingual puzzle\n");
     return (0);
 }
