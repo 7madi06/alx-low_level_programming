@@ -8,11 +8,9 @@
 
 void print_alphabet(void)
 {
-    for (int n = 97; n < 123; n++)
+    for (int n = 97; n <= 122; n++)
     {
         _putchar(n);
     }
-    
-
 	return (0);
 }
