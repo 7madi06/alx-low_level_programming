@@ -2,7 +2,7 @@
 
 /**
  * _islower - function that checks if input is lowercase
- * Description: 'returns 1 if input is lowercase or 0 if not'
+ * @c: This is a character in ASCII code.
  * Return: 1 if input is lowercase or 0 if not (Success)
 */
 
