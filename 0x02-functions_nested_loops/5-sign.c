@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpha - function that checks if input is lowercase or uppercase
+ * print_sign - function that checks if input is lowercase or uppercase
  * Description: checking things
  * @n: This is a character in ASCII code.
  * Return: 1 if n > zero, 0 if n is zero, -1 if n < zero
