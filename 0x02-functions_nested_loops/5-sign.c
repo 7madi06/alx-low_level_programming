@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_sign - function that checks if input is lowercase or uppercase
- * Description: checking things
+ * print_sign - prints the sign of a number.
+ *
  * @n: This is a character in ASCII code.
- * Return: 1 if n > zero, 0 if n is zero, -1 if n < zero
+ *
+ * Return: 1 if n > zero, 0 if n is zero, -1 if n < zero.
 */
 
 int print_sign(int n)
