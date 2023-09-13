@@ -2,6 +2,8 @@
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
         "_putchar.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "stdlib.h": "c",
+        "ctype.h": "c"
     }
 }
