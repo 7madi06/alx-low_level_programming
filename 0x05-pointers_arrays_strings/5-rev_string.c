@@ -7,18 +7,19 @@
 
 void rev_string(char *s)
 {
-
 	int i, j, count = 0;
+	char c;
 
 	while (s[count] != '\0')
 		count++;
 
 	j = count - 1;
-	char tempstr[500];
 
-	for (i = 0; i < count; i++)
+	for (i = 0; i < count / 2; i++)
 	{
-		tempstr[i] = s[j];
+		c = s[i];
+		s[i] = s[j];
+		s[j] = c;
 		j--;
 	}
 }
