@@ -14,7 +14,7 @@ void rev_string(char *s)
 		count++;
 
 	j = count - 1;
-	char tempstr[];
+	char tempstr[500];
 
 	for (i = 0; i < count; i++)
 	{
