@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
 * puts2 - prints every other character of a string.
@@ -11,7 +12,7 @@ void puts2(char *str)
 
 	for ( ; str[i] != '\0'; i++)
 	{
-		_putchar(str[i]);
+		write(1, str[i], 1);
 		i++;
 	}
 	_putchar('\n');
