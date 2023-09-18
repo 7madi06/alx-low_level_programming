@@ -1,4 +1,4 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
 * _puts - returns the length of a string.
@@ -7,5 +7,12 @@
 
 void _puts(char *str)
 {
-	_putchar(str);
-}
+	char nl = "\n";
+
+	while (*str)
+	{
+		write(1, str, 1);
+		str++;
+	}
+	write(1, &nl, 1)
+};
