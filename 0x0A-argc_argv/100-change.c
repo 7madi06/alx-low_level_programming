@@ -4,28 +4,28 @@
  * main - entrypoint.
  * Return: 1.
  */
-int main(void)
-{
-	int cents, coins[] = {25, 10, 5, 2, 1};
-	int total_coins = 0;
+#include <stdio.h>
+#include <stdlib.h>
 
-	printf("Enter the amount of cents: ");
-	if (scanf("%d", &cents) != 1)
+int main(int argc, char *argv[])
+{
+	int cents, coins = 0;
+	int total_coins [] = {25, 10, 5, 2, 1};
+
+	if (argc != 2)
 	{
-		fprintf(stderr, "Error: Invalid input\n");
+		printf("Error\n");
 		return (1);
 	}
 
-	if (cents >= 0)
+	cents = atoi(argv[1]);
+
+	for (int i = 0; i < sizeof(total_coins) / sizeof(total_coins[0]); i++)
 	{
-		for (int i = 0; i < 5; i++)
-		{
-			total_coins += cents / coins[i];
-			cents %= coins[i];
-		}
+		coins += cents / total_coins[i];
+		cents %= total_coins[i];
 	}
 
-	printf("%d\n", total_coins);
-
+	printf("%d\n", coins);
 	return (0);
 }
