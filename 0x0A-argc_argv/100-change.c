@@ -2,10 +2,10 @@
 #include <stdlib.h>
 /**
  * main - entrypoint.
+ * @argc : argc.
+ * @argv : argv.
  * Return: 1.
  */
-#include <stdio.h>
-#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
