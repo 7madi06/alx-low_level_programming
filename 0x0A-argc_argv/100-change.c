@@ -4,41 +4,43 @@
  * main - entrypoint.
  * Return: 1.
  */
-int main(void)
+int main(int argc, char *argv[])
 {
-	int cents;
-
-	printf("Enter the amount of cents: ");
-	if (scanf("%d", &cents) != 1)
+	if (argc != 2)
 	{
-		fprintf(stderr, "Error: Invalid input\n");
+		printf("Error\n");
 		return (1);
 	}
+
+	int cents = atoi(argv[1]);
 
 	if (cents < 0)
 	{
 		printf("0\n");
+		return (0);
 	}
-	else
-	{
-		int coins25 = cents / 25;
 
-		cents %= 25;
-		int coins10 = cents / 10;
+	int coins25 = cents / 25;
 
-		cents %= 10;
-		int coins5 = cents / 5;
+	cents %= 25;
+	int coins10 = cents / 10;
 
-		cents %= 5;
-		int coins2 = cents / 2;
+	cents %= 10;
+	int coins5 = cents / 5;
 
-		cents %= 2;
-		int coins1 = cents;
+	cents %= 5;
+	int coins2 = cents / 2;
 
-		int total_coins = coins25 + coins10 + coins5 + coins2 + coins1;
+	cents %= 2;
+	int coins1 = cents;
 
-		printf("%d\n", total_coins);
-	}
+	int total_coins = coins25 + coins10 + coins5 + coins2 + coins1;
+
+	printf("%d\n", total_coins);
 
 	return (0);
 }
+
+
+
+
