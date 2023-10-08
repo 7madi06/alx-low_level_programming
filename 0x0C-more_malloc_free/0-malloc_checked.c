@@ -1,7 +1,5 @@
 #include <main.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
 
 /**
  * malloc_checked - allocates memory,
@@ -15,7 +13,6 @@ void *malloc_checked(unsigned int b)
 
 	if (ptr == NULL)
 	{
-		write(STDERR_FILENO, "Error: malloc failed\n", 21);
 		exit(98);
 	}
 
