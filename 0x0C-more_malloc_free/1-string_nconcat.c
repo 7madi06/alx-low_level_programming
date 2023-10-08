@@ -5,54 +5,44 @@
  * string_nconcat - concatenates two strings,
  * @s1: string 1.
  * @s2: string 2.
+ * @n: amount of bytes.
  * Return: ptr to the full string.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 = 0, len2 = 0, totalLen, i, j;
-	char *result;
+	char *sout;
+	unsigned int ls1, ls2, lsout, i;
 
-	if (s1 != NULL)
-	{
-		while (s1[len1] != '\0')
-		{
-			len1++;
-		}
-	}
+	if (s1 == NULL)
+		s1 = "";
 
-	if (s2 != NULL)
-	{
-		while (s2[len2] != '\0')
-		{
-			len2++;
-		}
-	}
+	if (s2 == NULL)
+		s2 = "";
 
-	if (n >= len2)
-	{
-		n = len2;
-	}
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
+		;
 
-	totalLen = len1 + n;
-	result = (char *)malloc(totalLen + 1);
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
+		;
 
-	if (result == NULL)
-	{
+	if (n > ls2)
+		n = ls2;
+
+	lsout = ls1 + n;
+
+	sout = malloc(lsout + 1);
+
+	if (sout == NULL)
 		return (NULL);
-	}
 
-	for (i = 0; i < len1; i++)
-	{
-		result[i] = s1[i];
-	}
+	for (i = 0; i < lsout; i++)
+		if (i < ls1)
+			sout[i] = s1[i];
+		else
+			sout[i] = s2[i - ls1];
 
-	for (j = 0; j < n; j++)
-	{
-		result[i + j] = s2[j];
-	}
+	sout[i] = '\0';
 
-	result[totalLen] = '\0';
-
-	return (result);
+	return (sout);
 }
