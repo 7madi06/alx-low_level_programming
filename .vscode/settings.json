@@ -3,6 +3,7 @@
         "stdio.h": "c",
         "main.C": "cpp",
         "main.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "function_pointers.h": "c"
     }
 }
